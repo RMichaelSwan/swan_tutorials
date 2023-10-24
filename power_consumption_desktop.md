@@ -1,6 +1,12 @@
 # Power Consumption Tutorial
 
-Use these instructions to get the rough idle and max power usage of a system without using external phyiscal power monitoring tools (e.g. power clamp). The CPU usage is based off RAPL implementation provided in recent processors, while nvidia has their own on-gpu power monitoring apparently.
+Use these instructions to get the rough idle and max power usage of a system without using external phyiscal power monitoring tools (e.g. power clamp). The CPU usage is based off RAPL implementation provided in recent processors, while Nvidia has their own on-gpu power monitoring apparently.
+
+## Requirements
+
+Debian based system (e.g. `Ubuntu 20.04`) with an Nvidia GPU. It should be possible to do something similar with a Radeon GPU.
+
+## Tutorial
 
 **Verify usage tools are working:**
 1. Run `nvidia-smi` (if this doesn't work, check nvidia drivers)
@@ -39,3 +45,9 @@ lscpu > lscpu.log
 1. Send me a screenshot of `htop`
 2. Send `lscpu.log`
 3. Send me `gpu_idle.csv`, `gpu_high.csv`, `cpu_idle.log`, and `cpu_high.log`
+
+## References:
+
+1. https://github.com/wilicc/gpu-burn
+2. https://github.com/resurrecting-open-source-projects/stress
+3. https://github.com/hubblo-org/scaphandre/
