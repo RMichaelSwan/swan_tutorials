@@ -2,6 +2,10 @@
 
 Use these instructions to get the rough idle and max power usage of a system without using external phyiscal power monitoring tools (e.g. power clamp). The CPU usage is based off RAPL implementation provided in recent processors, while Nvidia has their own on-gpu power monitoring apparently.
 
+### Isn't There An Easier Way?
+
+Not really! The main reason we have to do CPU and GPU separately is that this gives us fairly accurate power estimation for systems that do not run on battery. For battery powered systems you can try using a tool like `powertop`, though I was not able to get accurate numbers out of it.
+
 ## Requirements
 
 Debian based system (e.g. `Ubuntu 20.04`) with an Nvidia GPU. It should be possible to do something similar with a Radeon GPU.
