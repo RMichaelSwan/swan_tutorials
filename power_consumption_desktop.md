@@ -25,7 +25,7 @@ cd gpu-burn
 make
 ./gpu_burn 5
 ```
-3. Copy power.bash script to gpu-burn folder. If needed, change cpu count on the `stress` command in the script. Commanding fewer threads will actually get higher usage/throughput in many cases (probably less thrashing of the scheduler).
+3. Copy `power.bash` script to `gpu-burn` folder. If needed, change cpu count on the `stress` command in the script. Commanding fewer threads will actually get higher usage/throughput in many cases (probably less thrashing of the scheduler).
 
 **Gather Data:**
 ```
