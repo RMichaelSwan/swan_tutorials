@@ -25,7 +25,7 @@ cd gpu-burn
 make
 ./gpu_burn 5
 ```
-3. Copy attached script to gpu-burn folder.
+3. Copy power.bash script to gpu-burn folder. If needed, change cpu count on the `stress` command in the script. Commanding fewer threads will actually get higher usage/throughput in many cases (probably less thrashing of the scheduler).
 
 **Gather Data:**
 ```
@@ -43,12 +43,11 @@ docker run -v /sys/class/powercap:/sys/class/powercap -v /proc:/proc -ti hubblo/
 docker run -v /sys/class/powercap:/sys/class/powercap -v /proc:/proc -ti hubblo/scaphandre stdout -p 20 -t 60 > cpu_high.log
 
 ### terminal 1: ctrl+c after 60 seconds
-lscpu > lscpu.log
 ```
-**Send data:**
-1. Send me a screenshot of `htop`
-2. Send `lscpu.log`
-3. Send me `gpu_idle.csv`, `gpu_high.csv`, `cpu_idle.log`, and `cpu_high.log`
+**Send data report:**
+1. Send screenshot of `htop`
+2. Send `os-info.txt`, `cpu-info.txt`, `hw-info.txt`
+3. Send  `gpu_idle.csv`, `gpu_high.csv`, `cpu_idle.log`, and `cpu_high.log`
 
 ## References:
 
